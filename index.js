@@ -1,12 +1,6 @@
 import express from 'express';
 import path from 'path';
-//commonjs const express = require('express')
-
-//Importando session do módulo express-session;
 import session from 'express-session';
-
-//Importando o módulo cookie-parser para permitir que a nossa aplicação
-//solicite e retorne cookies
 import cookieParser from 'cookie-parser';
 
 
@@ -30,8 +24,6 @@ app.use(session({
 //adicionando o middleware cookieParser
 app.use(cookieParser());
 
-//configurar a nossa aplicação para receber os dados do formulário
-//você pode escolher entre duas bibliotecas: QS ou QueryString
 app.use(express.urlencoded({ extended: true }));
 
 
